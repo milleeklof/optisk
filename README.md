@@ -1,0 +1,1 @@
+# This is supposed to become a Python library that helps with optical calculations
