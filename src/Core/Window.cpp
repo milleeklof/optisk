@@ -39,3 +39,5 @@ void Window::pollEvents() { glfwPollEvents(); }
 bool Window::shouldClose() const { return glfwWindowShouldClose(m_window); }
 
 void Window::swapBuffers() { glfwSwapBuffers(m_window); }
+
+GLFWwindow *Window::nativeHandle() const { return m_window; }

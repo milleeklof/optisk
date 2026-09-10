@@ -11,6 +11,11 @@ add_executable(Optisk
     src/App/main.cpp
     src/App/App.cpp
     src/Core/Window.cpp
+    src/GUI/EditorLayout.cpp
+    src/GUI/ScenePanel.cpp
+    src/GUI/AnalysisPanel.cpp
+    src/GUI/ViewportPanel.cpp
+    src/GUI/PropertiesPanel.cpp
 
     external/glad/src/gl.c
 

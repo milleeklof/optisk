@@ -11,6 +11,7 @@ public:
   void pollEvents();
   bool shouldClose() const;
   void swapBuffers();
+  GLFWwindow *nativeHandle() const;
 
 private:
   GLFWwindow *m_window;
