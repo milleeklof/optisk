@@ -18,6 +18,7 @@ add_executable(Optisk
     src/GUI/PropertiesPanel.cpp
     src/Scene/SceneObject.cpp
     src/Scene/Lens.cpp
+    src/Scene/Scene.cpp
 
     external/glad/src/gl.c
 
