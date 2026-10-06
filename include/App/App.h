@@ -1,5 +1,6 @@
 #pragma once
 #include "Core/Window.h"
+#include "Scene/Scene.h"
 
 class App {
 public:
@@ -7,4 +8,5 @@ public:
 
 private:
   Window m_window;
+  Scene m_scene;
 };

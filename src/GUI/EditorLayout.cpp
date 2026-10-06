@@ -5,6 +5,8 @@
 #include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl3.h"
 
+class Scene;
+
 void EditorLayout::init(GLFWwindow *window) {
   IMGUI_CHECKVERSION();
   ImGui::CreateContext();
@@ -18,7 +20,7 @@ void EditorLayout::init(GLFWwindow *window) {
   ImGui_ImplOpenGL3_Init("#version 410");
 }
 
-void EditorLayout::beginFrame() {
+void EditorLayout::beginFrame(const Scene &scene) {
   ImGui_ImplOpenGL3_NewFrame();
   ImGui_ImplGlfw_NewFrame();
   ImGui::NewFrame();
@@ -51,7 +53,7 @@ void EditorLayout::beginFrame() {
     ImGui::DockBuilderFinish(dockspaceId);
   }
 
-  m_scenePanel.draw();
+  m_scenePanel.draw(scene);
   m_viewportPanel.draw();
   m_propertiesPanel.draw();
   m_analysisPanel.draw();

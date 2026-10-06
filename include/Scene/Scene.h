@@ -6,7 +6,7 @@
 class Scene {
 public:
   void add(std::unique_ptr<SceneObject> object);
-  const std::vector < std::unique_ptr<SceneObject> &objects() const;
+  const std::vector<std::unique_ptr<SceneObject>> &objects() const;
 
 private:
   std::vector<std::unique_ptr<SceneObject>> m_objects;

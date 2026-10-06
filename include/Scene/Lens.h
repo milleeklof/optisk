@@ -1,9 +1,10 @@
 #pragma once
 #include "Scene/SceneObject.h"
+#include <string>
 
 class Lens : public SceneObject {
 public:
-  Lens();
+  Lens(std::string name);
   void render() override;
 
 private:

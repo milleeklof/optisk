@@ -7,10 +7,12 @@
 
 struct GLFWwindow;
 
+class Scene;
+
 class EditorLayout {
 public:
   void init(GLFWwindow *window);
-  void beginFrame();
+  void beginFrame(const Scene &scene);
   void render();
   void shutdown();
 
