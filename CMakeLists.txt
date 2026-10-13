@@ -7,6 +7,12 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 add_subdirectory(external/glfw)
 
+add_library(OptiskCore
+    src/Scene/Scene.cpp
+    src/Scene/Lens.cpp
+)
+target_include_directories(OptiskCore PUBLIC include)
+
 add_executable(Optisk
     src/App/main.cpp
     src/App/App.cpp
@@ -17,8 +23,6 @@ add_executable(Optisk
     src/GUI/ViewportPanel.cpp
     src/GUI/PropertiesPanel.cpp
     src/Scene/SceneObject.cpp
-    src/Scene/Lens.cpp
-    src/Scene/Scene.cpp
 
     external/glad/src/gl.c
 
@@ -40,5 +44,4 @@ target_include_directories(Optisk PRIVATE
     external/imgui
     external/imgui/backends
 )
-
-target_link_libraries(Optisk PRIVATE glfw)
+target_link_libraries(Optisk PRIVATE OptiskCore glfw)

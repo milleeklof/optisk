@@ -5,4 +5,4 @@
 
 Lens::Lens(std::string name) : SceneObject(std::move(name)) {}
 
-void Lens::render() { std::cout << "Rendering lens\n"; }
+// void Lens::render() { std::cout << "Rendering lens\n"; }

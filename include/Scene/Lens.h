@@ -5,7 +5,7 @@
 class Lens : public SceneObject {
 public:
   Lens(std::string name);
-  void render() override;
+  // void render() override;
 
 private:
   double m_frontRadius = 100.0; // Positive if convex (mm)

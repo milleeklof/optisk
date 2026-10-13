@@ -9,10 +9,10 @@ struct Transform {
 
 class SceneObject {
 public:
-  virtual ~SceneObject() = default;
-  virtual void render() = 0;
-
   explicit SceneObject(std::string name) : m_name(std::move(name)) {}
+  virtual ~SceneObject() = default;
+  // virtual void render() = 0;
+
   const std::string &name() const { return m_name; }
   void setName(std::string name) { m_name = std::move(name); }
 
